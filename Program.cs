@@ -33,17 +33,15 @@ namespace Personalregister
                     Console.WriteLine("Lön måste anges i heltal ");
                 }
 
-                //Employees employees = new Employees();
-                //employees._employees = employees.AddEmployee(employee);
                 _employees.Add(new Employee { Firstname = employee.Firstname, Lastname = employee.Lastname, Salary = employee.Salary });
 
                 Console.Write("********************************************************");
 
 
-                foreach (var item in _employees)
+                foreach (Employee employee2 in _employees)
                 {
                     Console.WriteLine();
-                    Console.WriteLine(item.Firstname + " " + item.Lastname + " " + item.Salary);
+                    Console.WriteLine($"Namn: {employee2.Firstname} Efternamn: {employee2.Lastname} Lön: {employee2.Salary}");
                 }
 
                 Console.WriteLine();
@@ -56,7 +54,8 @@ namespace Personalregister
                 };
 
             } while (quit != "q");
-            Environment.Exit(0);
+         
+
         }
 
     }

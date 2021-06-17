@@ -6,8 +6,8 @@ namespace Personalregister
 {
     class Employee
     {
-        public string Firstname;
-        public string Lastname;
-        public int Salary;
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public int Salary { get; set; }
     }
 }
